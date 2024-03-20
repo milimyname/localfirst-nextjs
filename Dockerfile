@@ -25,9 +25,11 @@ ARG DATABASE_URL
 ARG NEXTAUTH_SECRET
 ENV DATABASE_URL=${DATABASE_URL}
 ENV NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+ENV SKIP_ENV_VALIDATION true
 
 # Generate Prisma client
-RUN npx prisma generate
+RUN npx zenstack generate
+
 
 # Build the application
 RUN \
