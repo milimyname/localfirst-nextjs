@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: "milimyname/localfirst-nextjs"
+  IMAGE_NAME: "milimyname/zenstack-nextjs"
 
 jobs:
   amd64:
