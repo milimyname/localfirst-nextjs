@@ -22,7 +22,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ARG DATABASE_URL
+ARG NEXTAUTH_SECRET
 ENV DATABASE_URL=${DATABASE_URL}
+ENV NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
 
 # Generate Prisma client
 RUN npx zenstack generate
