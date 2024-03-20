@@ -27,7 +27,7 @@ ENV DATABASE_URL=${DATABASE_URL}
 ENV NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
 
 # Generate Prisma client
-RUN npx zenstack generate
+RUN npx prisma generate
 
 # Build the application
 RUN \
